@@ -13,7 +13,7 @@ results.
 
 ## Installation
 ```
-BiocManager::install('MetaVolcanoR')
+devtools::install_github("muntasimfuad/MetaVolcanoR")
 ```
 
 ## Usage
