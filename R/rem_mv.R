@@ -16,6 +16,10 @@ setOldClass('ggplot')
 #' @slot MetaVolcano plot with meta-analysis results
 #' @slot degfreq supplementary figure of the vote-counting MetaVolcano
 
+#' @details
+#' The class uses `ANY` for plot slots to maintain compatibility with different
+#' ggplot2 versions and plotting systems.
+
 setClass('MetaVolcano', slots = list(input='data.frame',
 				     inputnames='character',
 				     metaresult='data.frame',
