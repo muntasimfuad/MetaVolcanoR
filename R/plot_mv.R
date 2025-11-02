@@ -44,9 +44,9 @@ plot_mv <- function(meta_diffexp, nstud, genecol, comb, metafc) {
     g + theme_classic() +
 	theme(panel.border= element_blank()) +
 	theme(axis.text.x = element_text(angle = 0, vjust = 0.5)) +
-	theme(axis.line.x = element_line(color = "black", size = 0.6, 
+	theme(axis.line.x = element_line(color = "black", linewidth = 0.6, 
 					 lineend = "square"),
-	      axis.line.y = element_line(color = "black", size = 0.6, 
+	      axis.line.y = element_line(color = "black", linewidth = 0.6, 
 					 lineend = "square")) +
 	theme(legend.position = "none") +
 	scale_color_manual(values=c("#377EB8", "grey", "#E41A1C"))

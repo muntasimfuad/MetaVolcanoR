@@ -39,4 +39,4 @@ biocViews: GeneExpression, DifferentialExpression, Transcriptomics, mRNAMicroarr
 LazyData: true
 roxygennote: 6.1.1.9000
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.3

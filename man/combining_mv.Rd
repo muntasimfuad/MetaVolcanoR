@@ -4,10 +4,19 @@
 \alias{combining_mv}
 \title{A function to draw the 'Combining meta-analysis' MetaVolcano}
 \usage{
-combining_mv(diffexp = list(), pcriteria = "pvalue",
-  foldchangecol = "Log2FC", genenamecol = "Symbol", geneidcol = NULL,
-  metafc = "Mean", metathr = 0.01, collaps = "FALSE",
-  jobname = "MetaVolcano", outputfolder = ".", draw = "HTML")
+combining_mv(
+  diffexp = list(),
+  pcriteria = "pvalue",
+  foldchangecol = "Log2FC",
+  genenamecol = "Symbol",
+  geneidcol = NULL,
+  metafc = "Mean",
+  metathr = 0.01,
+  collaps = "FALSE",
+  jobname = "MetaVolcano",
+  outputfolder = ".",
+  draw = "HTML"
+)
 }
 \arguments{
 \item{diffexp}{list of data.frame/data.table (s) with DE results where lines

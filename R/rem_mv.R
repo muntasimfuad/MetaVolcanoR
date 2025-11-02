@@ -19,8 +19,8 @@ setOldClass('ggplot')
 setClass('MetaVolcano', slots = list(input='data.frame',
 				     inputnames='character',
 				     metaresult='data.frame',
-				     MetaVolcano='gg',
-				     degfreq='gg'
+				     MetaVolcano='ANY',
+				     degfreq='ANY'
 				     ))
 
 #' A function to perform the Random Effect Model (REM) MetaVolcano

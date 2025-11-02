@@ -4,11 +4,23 @@
 \alias{rem_mv}
 \title{A function to perform the Random Effect Model (REM) MetaVolcano}
 \usage{
-rem_mv(diffexp = list(), pcriteria = "pvalue",
-  foldchangecol = "Log2FC", genenamecol = "Symbol", geneidcol = NULL,
-  collaps = FALSE, llcol = "CI.L", rlcol = "CI.R", vcol = NULL,
-  cvar = TRUE, metathr = 0.01, jobname = "MetaVolcano",
-  outputfolder = ".", draw = "HTML", ncores = 1)
+rem_mv(
+  diffexp = list(),
+  pcriteria = "pvalue",
+  foldchangecol = "Log2FC",
+  genenamecol = "Symbol",
+  geneidcol = NULL,
+  collaps = FALSE,
+  llcol = "CI.L",
+  rlcol = "CI.R",
+  vcol = NULL,
+  cvar = TRUE,
+  metathr = 0.01,
+  jobname = "MetaVolcano",
+  outputfolder = ".",
+  draw = "HTML",
+  ncores = 1
+)
 }
 \arguments{
 \item{diffexp}{list of data.frame/data.table (s) with DE results where lines
