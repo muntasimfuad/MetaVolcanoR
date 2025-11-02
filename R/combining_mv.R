@@ -111,15 +111,33 @@ combining_mv <- function(diffexp=list(), pcriteria="pvalue",
     }    	
     
     # --- Combining Pvalues with Fisher method
-    dplyr::select(meta_diffexp, 
-        dplyr::matches(paste(c(genecol, pcriteria), collapse = "|"))) %>%
-	    tidyr::gather(study, value, -!!as.name(genecol)) %>%
-	    dplyr::filter(!is.na(value)) %>%
-	    dplyr::group_by(!!as.name(genecol)) %>%
-	    dplyr::summarize('metap' = tryCatch({ 
-	        metap::sumlog(value)$p},
-		    error = function(e){ return(NA) })) %>%
-	    dplyr::filter(!is.na(metap)) -> meta_p
+  
+  dplyr::select(meta_diffexp, 
+                dplyr::matches(paste(c(genecol, pcriteria), collapse = "|"))) %>%
+    tidyr::gather(study, value, -!!as.name(genecol)) %>%
+    dplyr::filter(!is.na(value)) %>%
+    dplyr::group_by(!!as.name(genecol)) %>%
+    dplyr::summarize(
+      'metap' = {
+        valid_pvals <- value[!is.na(value)]
+        n_valid <- length(valid_pvals)
+        
+        if (n_valid >= 2) {
+          # True meta-analysis: Fisher's method for 2+ p-values
+          metap::sumlog(valid_pvals)$p
+        } else if (n_valid == 1) {
+          # Single study: preserve the original p-value
+          valid_pvals[1]
+        } else {
+          # No valid p-values
+          NA_real_
+        }
+      },
+      'n_studies' = length(value[!is.na(value)]),  # Track how many studies contributed
+      'evidence_type' = ifelse(length(value[!is.na(value)]) >= 2, 
+                               "meta_analysis", "single_study")
+    ) %>%
+    dplyr::filter(!is.na(metap)) -> meta_p
 
     
     meta_diffexp <- merge(meta_diffexp, meta_p, by = genecol)    
@@ -180,7 +198,7 @@ combining_mv <- function(diffexp=list(), pcriteria="pvalue",
 
     # Set combining result
     icols <- paste(c(genecol, pcriteria, foldchangecol), collapse="|")
-    rcols <- paste(c(genecol, "metafc", "metap", "idx"), collapse="|")
+    rcols <- paste(c(genecol, "metafc", "metap", "idx", "n_studies", "evidence_type"), collapse="|")
     result <- new('MetaVolcano', 
 		  input=dplyr::select(meta_diffexp, 
 				      dplyr::matches(icols)),
