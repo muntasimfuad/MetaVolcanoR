@@ -35,5 +35,5 @@ draw_cum_freq <- function(meta_diffexp, nstud) {
         guides(colour = guide_colorbar()) +
         labs(x = "Number of datasets",
              y = "Number of differentially expressed genes") +
-        scale_x_discrete(limits=0:nstud)
+    scale_x_continuous(limits = c(0, nstud))
 }

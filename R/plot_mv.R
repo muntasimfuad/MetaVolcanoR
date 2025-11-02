@@ -36,7 +36,7 @@ plot_mv <- function(meta_diffexp, nstud, genecol, comb, metafc) {
 				      text = !!rlang::sym(genecol))) +
 		geom_jitter(aes(color = degvcount), cex = 0.5, 
 			    width = 0.45, height = 0.45) +
-		scale_x_discrete(limits = -nstud:nstud) +
+	  scale_x_continuous(limits = c(-nstud, nstud)) +
 		labs(x = "Sign consistency",
 		     y = "Number of times as differentially expressed")
     }
