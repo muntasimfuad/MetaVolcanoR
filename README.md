@@ -1,9 +1,10 @@
 <p align="center">
   <img src="assets/Logo.png" alt="Project Logo" width="250">
   <br>
-  <h2>MetaVolcanoR</h2>
-  <p>An R package for performing meta-analysis of differential gene expression analysis results from multiple studies</p>
+  <span style="font-size: 28px; font-weight: bold;">MetaVolcanoR</span>
   <br>
+  <em>An R package for performing meta-analysis of differential gene expression analysis results from multiple studies</em>
+  <br><br>
   <sub>Forked from <a href="https://github.com/csbl-usp/MetaVolcanoR">csbl-usp/MetaVolcanoR</a></sub>
 </p>
 
