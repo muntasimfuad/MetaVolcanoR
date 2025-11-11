@@ -8,10 +8,6 @@
   <sub>Forked from <a href="https://github.com/csbl-usp/MetaVolcanoR">csbl-usp/MetaVolcanoR</a></sub>
 </p>
 
-# MetaVolcanoR
-
-An R package for performing meta-analysis of differential gene expression analysis results from multiple studies
-
 ## Overview
 
 The MetaVolcanoR R package combines differential gene expression results. 
