@@ -1,6 +1,6 @@
 # MetaVolcanoR
 
-Gene expression meta-analysis visualization tool.
+An R package for performing meta-analysis of differential gene expression analysis results from multiple studies
 
 ## Overview
 
