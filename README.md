@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="assets/Logo.png" alt="Project Logo" width="250">
+  <img src="assets/Logo.png" alt="Project Logo" width="300">
   <br>
-  <strong>MetaVolcanoR</strong>
+  <span style="font-size: 28px; font-weight: bold;">MetaVolcanoR</span>
   <br>
   <em>An R package for performing meta-analysis of differential gene expression analysis results from multiple studies</em>
   <br><br>
