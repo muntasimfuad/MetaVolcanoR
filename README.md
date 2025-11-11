@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Logo.png" alt="Project Logo" width="150">
+  <img src="assets/Logo.png" alt="Project Logo" width="250">
 </p>
 
 # MetaVolcanoR
