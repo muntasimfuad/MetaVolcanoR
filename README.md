@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/Logo.png" alt="Project Logo" width="150">
+</p>
+
 # MetaVolcanoR
 
 An R package for performing meta-analysis of differential gene expression analysis results from multiple studies
