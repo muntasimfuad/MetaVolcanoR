@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/Logo.png" alt="Project Logo" width="250">
+  <img src="assets/Logo.png" alt="Project Logo" width="350">
   <br>
   <h1>MetaVolcanoR</h1>
   <em>An R package for performing meta-analysis of differential gene expression analysis results from multiple studies</em>
